@@ -1,0 +1,38 @@
+/* property-name: value;
+- 무조건 소문자
+- 공백 없음
+- 끝에 ;(세미콜론) 필수
+
+h1 {
+  property-name: value;
+}
+
+id는 #과 함께 작성
+#id_name {
+  property-name: value;
+}
+
+class는 .과 함께 작성
+.name {
+  property-name: value;
+}
+
+h1과 class 함께 작성
+h1 .name {
+  property-name: value;
+}
+
+selector (id, class, tag name)
+selector (id, class, tag name) {
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+}
+*/
+
+h1 {
+  color: green;
+  font-size: 20px;
+}
