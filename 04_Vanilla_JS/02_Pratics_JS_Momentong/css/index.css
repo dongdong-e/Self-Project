@@ -1,0 +1,200 @@
+/* import text */
+@import url("https://fonts.googleapis.com/css?family=Black+Ops+One|Fredericka+the+Great|Monoton|Press+Start+2P|Wallpoet&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Amatic+SC:400,700|Courgette|Josefin+Sans:400,700|Kanit:400,700|Luckiest+Guy|Modak|Oswald:400,700|Patrick+Hand|Russo+One|Turret+Road&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Baloo+Bhai|Concert+One|Fredoka+One|Jua|Rajdhani|Righteous&display=swap");
+
+.js-date {
+  line-height: 0.5em;
+}
+
+.js-date .date {
+  font-family: "Fredoka One", cursive;
+  color: #404040;
+  font-size: 25px;
+  letter-spacing: 15px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js-date .time {
+  font-family: "Fredoka One", cursive;
+  color: #000000;
+  font-size: 100px;
+  letter-spacing: 15px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* div .js-clock {
+  font-family: "Wallpoet", cursive;
+  color: #b4ce85;
+  font-size: 50px;
+  letter-spacing: 15px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+input[type="text"] {
+  font-family: "Jua", sans-serif;
+  /* border: 1px solid;
+  text-align: center;
+  width: 250px; */
+  text-align: center;
+  appearance: none;
+  background-color: none;
+  line-height: 0;
+  font-size: 17px;
+  width: 250px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.name_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+div .js-toDoForm {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div .js-toDoList {
+  font-family: "Jua", sans-serif;
+  /* background-color:#000000; */
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_weather {
+  color: black;
+  font-family: "Fredoka One", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+ul li {
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+ul button {
+  color: black;
+}
+
+span {
+  padding-right: 10px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+body {
+  color: white;
+}
+
+.clicked {
+  color: #7f8c8d;
+}
+
+.form {
+  display: none;
+}
+
+.greetings {
+  font-size: 30px;
+  letter-spacing: 4px;
+  display: none;
+}
+
+.showing {
+  font-family: "Jua", sans-serif;
+  color: #404040;
+  margin-bottom: 40px;
+  margin-top: -45px;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+button {
+  font-family: "Fredoka One", cursive;
+  background: #f7f7f7;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 31px;
+  font-size: 0.8em;
+  padding: 0.2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+button:hover {
+  background: #fff;
+  color: black;
+}
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #404040;
+  transition: 400ms ease all;
+}
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
