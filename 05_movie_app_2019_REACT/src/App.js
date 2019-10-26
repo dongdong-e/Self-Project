@@ -1,47 +1,61 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import axios from "axios";
+import Movie from "./Movie";
+import "./App.css";
 
-// React는 자동으로 class component의 render method를 실행함
-// class component는 class이지만 react component에서 확장 -> 스크린에 표시하기 위해서는 render 활용
 class App extends React.Component {
-  // state는 object
   state = {
-    count: 0
+    isLoading: true,
+    movies: []
   };
 
-  // state를 변경해주기 위해서는 setState를 활용해 render()을 호출함
-  // call setState, react is going to re-render!
-  add = () => {
-    this.setState(current => ({ count: current.count + 1 }));
-  };
-  minus = () => {
-    this.setState(current => ({ count: current.count - 1 }));
-  };
-
-  componentDidMount() {
-    console.log("component rendered");
-  }
-
-  // componentWillUnmount(): component가 떠날 때 호출, 페이지 이동 등
-  componentWillUnmount() {
-    console.log("Goobye, cruel world.");
-  }
-
-  // function(): 함수 바로 실행, function: 클릭할 때만 실행
-  // function이 아니기 때문에 return이 적용되지 않음 -> render
-  render() {
-    console.log("I'm rendering");
-    return (
-      <div>
-        <h1>The number is: {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
+  // axios may be slow so need to tell wait a second till DidMount function finish to JS.
+  // async ~ await: wait till axios.get() function finish.
+  getMovies = async () => {
+    const {
+      // a.b.c = {a: {b: {c}}}
+      data: {
+        data: { movies }
+      }
+    } = await axios.get(
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
     );
+    // this.setState({movies:movies}); -> movies from state: movies from axios
+    this.setState({ movies, isLoading: false });
+  };
+
+  // Called immediately after a component is mounted. Setting state here will trigger re-rendering.
+  componentDidMount() {
+    this.getMovies();
   }
 
-  componentDidUpdate() {
-    console.log("I just updated.");
+  render() {
+    // 아래 코드는 {this.state.isLoading ? "Loading..." : "We are ready"}와 동일하다.
+    // const { isLoading } = this.state; -> Get me this.state status.
+    const { isLoading, movies } = this.state;
+    return (
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            {movies.map(movie => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+                genres={movie.genres}
+              />
+            ))}
+          </div>
+        )}
+      </section>
+    );
   }
 }
 
