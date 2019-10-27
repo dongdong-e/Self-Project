@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amatic+SC:400,700|Courgette|Josefin+Sans:400,700|Kanit:400,700|Luckiest+Guy|Modak|Oswald:400,700|Patrick+Hand|Russo+One|Turret+Road&display=swap');
+
+.js-clock {
+  font-family: 'Courgette', cursive;
+  color: #75e68a;
+  font-size: 50px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  font-family: 'Oswald', sans-serif;
+  /* border: 1px solid;
+  text-align: center;
+  width: 250px; */
+  text-align: center;
+  appearance: none;
+  background-color: none;
+  line-height: 0;
+  font-size: 17px;
+  width: 250px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.name_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+div .js-toDoForm {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div .js-toDoList {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.info_weather {
+  color: white;
+  font-family: 'Courgette', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+ul li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+span {
+  padding-right: 10px;
+}
+
+/* .js-clock,
+.js-toDoForm,
+.js-toDoList,
+.name_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.btn {
+  cursor: pointer;
+}
+
+body {
+  color: white;
+}
+
+.clicked {
+  color: #7f8c8d;
+}
+
+.form {
+  display: none;
+}
+
+.greetings {
+  font-size: 30px;
+  display: none;
+}
+
+.showing {
+  font-family: 'Oswald', sans-serif;
+  color: #d2dae2;
+  margin-bottom: 40px;
+  margin-top: -45px;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+button{
+  background:#75e68a;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:20px;
+  font-size:0.8em;
+  padding: 0.2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#75e68a;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #75e68a;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
