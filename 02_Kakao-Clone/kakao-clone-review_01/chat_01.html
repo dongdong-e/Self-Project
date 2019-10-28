@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="https://kit.fontawesome.com/500552d168.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/500552d168.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Chat | Kakao Clone</title>
   </head>
   <body>
@@ -25,23 +23,25 @@
     </div>
     <header class="header">
       <div class="header__header-column">
-        <a href="index.html">
+        <a href="index.html" class="header__back-btn">
           <i class="fas fa-arrow-left"></i>
         </a>
         <h1 class="header__title">YOOJUNG KIM</h1>
-        <div class="header__icon">
+      </div>
+      <div class="header__header-column">
+        <span class="header__icon">
           <i class="fas fa-search"></i>
-        </div>
-        <div class="header__icon">
+        </span>
+        <span class="header__icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </div>
     </header>
     <main class="chat">
       <ul class="chat__messages">
         <span class="chat__timestamp">Sunday, October 27, 2019</span>
         <li class="incoming-message message">
-          <img class="g-avatar message__avatar" src="img/yj_kim.jpg" />
+          <img class="message__avatar" src="img/yj_kim.jpg" />
           <div class="message__content">
             <span class="message__author">YOOJUNG KIM</span>
             <div class="message__bubble">
@@ -59,7 +59,7 @@
           </div>
         </li>
         <li class="incoming-message message">
-          <img class="g-avatar message__avatar" src="img/yj_kim.jpg" />
+          <img class="message__avatar" src="img/yj_kim.jpg" />
           <div class="message__content">
             <span class="message__author">YOOJUNG KIM</span>
             <div class="message__bubble">
@@ -75,11 +75,7 @@
         <i class="far fa-plus-square"></i>
       </div>
       <div class="chat__write-column">
-        <input
-          type="text"
-          class="chat__write-input"
-          placeholder="Send Message"
-        />
+        <input type="text" class="chat__write-input" placeholder="Send Message" />
       </div>
       <div class="chat__write-column">
         <span class="chat__write-icon">

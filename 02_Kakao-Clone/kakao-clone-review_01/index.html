@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="https://kit.fontawesome.com/500552d168.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/500552d168.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Chats | Kakao Clone</title>
   </head>
   <body>
@@ -32,6 +30,9 @@
           <i class="fas fa-search"></i>
         </span>
         <span class="header__icon">
+          <i class="far fa-comment-dots"></i>
+        </span>
+        <span class="header__icon">
           <i class="fas fa-cog"></i>
         </span>
       </div>
@@ -40,26 +41,31 @@
       <ul class="chats__list">
         <li class="chats__chat chat">
           <a href="chat_01.html">
-            <div class="chat__column">
-              <img class="chat__avatar g-avatar" src="img/yj_kim.jpg" />
-              <div class="chat__content">
-                <span class="chat__username">YJ KIM</span>
-                <span class="chat__preview">Yeap :)</span>
+            <div class="chats__chat friend">
+              <div class="friend__column">
+                <img class="m-avatar friend__avatar" src="img/yj_kim.jpg" />
+                <div class="friend__content">
+                  <span class="friend__name">YOOJUNG KIM</span>
+                  <span class="friend__bottom-text">yeap!</span>
+                </div>
               </div>
-            </div>
-            <div class="chat__column">
-              <span class="chat__timestamp">yesterday</span>
+              <div class="friend__column">
+                <span class="chat__timestamp">Yesterday</span>
+              </div>
             </div>
           </a>
+          <!--  -->
           <a href="chat_02.html">
-            <div class="chat__column">
-              <img class="chat__avatar g-avatar" src="img/sw_jo.jpg" />
-              <div class="chat__content">
-                <span class="chat__username">SW JO</span>
-                <span class="chat__preview">See you!</span>
+            <div class="chats__chat friend">
+              <div class="friend__column">
+                <img class="m-avatar friend__avatar" src="img/sw_jo.jpg" />
+                <div class="friend__content">
+                  <span class="friend__name">SEUNGWOO JO</span>
+                  <span class="friend__bottom-text">What are u doing now~?</span>
+                </div>
               </div>
-              <div class="chat__column">
-                <span class="chat__timestap">AM 11:24</span>
+              <div class="friend__column">
+                <span class="chat__timestamp">AM 10:15</span>
               </div>
             </div>
           </a>
@@ -75,6 +81,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
             <i class="fas fa-comments"></i>
           </a>
         </li>
