@@ -8,4 +8,4 @@
 3. **KAKAOTALK Web Clone Project**
    - https://github.com/dongdong-e/Self-Project/tree/master/Kakao-Clone
 4. **Vanilla-JS Project Project**
-   - https://github.com/dongdong-e/Self-Project/tree/master/Vanilla-JS
+   -  https://github.com/dongdong-e/Self-Project/tree/master/04_Vanilla_JS 
